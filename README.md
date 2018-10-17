@@ -1,6 +1,10 @@
 
 # react-native-custom-keyboard-kit
 
+We will release very soon. Please stay tuned!
+
+<!---
+
 ## Getting started
 
 `$ npm install react-native-custom-keyboard-kit --save`
@@ -42,4 +46,4 @@ import RNCustomKeyboardKit from 'react-native-custom-keyboard-kit';
 // TODO: What to do with the module?
 RNCustomKeyboardKit;
 ```
-  
+-->

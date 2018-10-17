@@ -46,30 +46,29 @@ public class RNCustomKeyboardKitModule extends ReactContextBaseJavaModule {
 
   Handler handle = new Handler(Looper.getMainLooper());
 
-  private ReactEditText getEditById(int id) {
-    UIViewOperationQueue uii = this.getReactApplicationContext().getNativeModule(UIManagerModule.class).getUIImplementation().getUIViewOperationQueue();
-    return (ReactEditText) uii.getNativeViewHierarchyManager().resolveView(id);
+  @Override
+  public String getName() {
+    return "CustomKeyboardKit";
   }
 
-  private View createCustomKeyboard(Activity activity, int tag, String type) {
-    RelativeLayout layout = new RelativeLayout(activity);
-    rootView = new ReactRootView(this.getReactApplicationContext());
-    rootView.setBackgroundColor(Color.WHITE);
+  private ReactEditText getEditById(int id) {
+    // UIViewOperationQueue uii = this.getReactApplicationContext().getNativeModule(UIManagerModule.class).getUIImplementation().getUIViewOperationQueue();
+    // return (ReactEditText) uii.getNativeViewHierarchyManager().resolveView(id);
 
-    Bundle bundle = new Bundle();
-    bundle.putInt("tag", tag);
-    bundle.putString("type", type);
-    rootView.startReactApplication(
-            ((ReactApplication) activity.getApplication()).getReactNativeHost().getReactInstanceManager(),
-            "CustomKeyboard",
-            bundle);
+    UIViewOperationQueue uii = null;
+    ReactEditText edit = null;
 
-    final float scale = activity.getResources().getDisplayMetrics().density;
-    RelativeLayout.LayoutParams lParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, Math.round(216*scale));
-    lParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, RelativeLayout.TRUE);
-    layout.addView(rootView, lParams);
-    // activity.addContentView(layout, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
-    return layout;
+    while (edit == null) {
+      uii = this.getReactApplicationContext().getNativeModule(UIManagerModule.class).getUIImplementation().getUIViewOperationQueue();
+
+      try {
+        edit = (ReactEditText) uii.getNativeViewHierarchyManager().resolveView(id);
+      } catch (IllegalViewOperationException e) {
+
+      }
+    }
+
+    return edit;
   }
 
   @ReactMethod
@@ -79,11 +78,12 @@ public class RNCustomKeyboardKitModule extends ReactContextBaseJavaModule {
         public void run() {
           final Activity activity = getCurrentActivity();
           final ReactEditText edit = getEditById(tag);
+
           if (edit == null) {
             return;
           }
 
-          edit.setTag(TAG_ID, createCustomKeyboard(activity, tag, type));
+          edit.setTag(TAG_ID, createCustomKeyboardKit(activity, tag, type));
 
           edit.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
@@ -129,6 +129,27 @@ public class RNCustomKeyboardKitModule extends ReactContextBaseJavaModule {
 
   ReactRootView rootView = null;
 
+  private View createCustomKeyboardKit(Activity activity, int tag, String type) {
+    RelativeLayout layout = new RelativeLayout(activity);
+    rootView = new ReactRootView(this.getReactApplicationContext());
+    rootView.setBackgroundColor(Color.WHITE);
+
+    Bundle bundle = new Bundle();
+    bundle.putInt("tag", tag);
+    bundle.putString("type", type);
+    rootView.startReactApplication(
+            ((ReactApplication) activity.getApplication()).getReactNativeHost().getReactInstanceManager(),
+            "CustomKeyboardKit",
+            bundle);
+
+    final float scale = activity.getResources().getDisplayMetrics().density;
+    RelativeLayout.LayoutParams lParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, Math.round(216*scale));
+    lParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, RelativeLayout.TRUE);
+    layout.addView(rootView, lParams);
+    // activity.addContentView(layout, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+    return layout;
+  }
+
   @ReactMethod
   public void uninstall(final int tag) {
     UiThreadUtil.runOnUiThread(new Runnable() {
@@ -145,22 +166,22 @@ public class RNCustomKeyboardKitModule extends ReactContextBaseJavaModule {
     });
   }
 
-   @ReactMethod
-    public void insertText(final int tag, final String text) {
-      UiThreadUtil.runOnUiThread(new Runnable() {
-        @Override
-        public void run() {
-          final Activity activity = getCurrentActivity();
-          final ReactEditText edit = getEditById(tag);
-          if (edit == null) {
-            return;
-          }
-
-          int start = Math.max(edit.getSelectionStart(), 0);
-          int end = Math.max(edit.getSelectionEnd(), 0);
-          edit.getText().replace(Math.min(start, end), Math.max(start, end),
-                  text, 0, text.length());
+  @ReactMethod
+  public void insertText(final int tag, final String text) {
+    UiThreadUtil.runOnUiThread(new Runnable() {
+      @Override
+      public void run() {
+        final Activity activity = getCurrentActivity();
+        final ReactEditText edit = getEditById(tag);
+        if (edit == null) {
+          return;
         }
+
+        int start = Math.max(edit.getSelectionStart(), 0);
+        int end = Math.max(edit.getSelectionEnd(), 0);
+        edit.getText().replace(Math.min(start, end), Math.max(start, end),
+                text, 0, text.length());
+      }
     });
   }
 
@@ -275,10 +296,5 @@ public class RNCustomKeyboardKitModule extends ReactContextBaseJavaModule {
         });
       }
     });
-  }
-
-  @Override
-  public String getName() {
-    return "CustomKeyboardKit";
   }
 }
