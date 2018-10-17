@@ -34,14 +34,6 @@
       compile project(':react-native-custom-keyboard-kit')
   	```
 
-#### Windows
-[Read it! :D](https://github.com/ReactWindows/react-native)
-
-1. In Visual Studio add the `RNCustomKeyboardKit.sln` in `node_modules/react-native-custom-keyboard-kit/windows/RNCustomKeyboardKit.sln` folder to their solution, reference from their app.
-2. Open up your `MainPage.cs` app
-  - Add `using Custom.Keyboard.Kit.RNCustomKeyboardKit;` to the usings at the top of the file
-  - Add `new RNCustomKeyboardKitPackage()` to the `List<IReactPackage>` returned by the `Packages` method
-
 
 ## Usage
 ```javascript
