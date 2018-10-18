@@ -72,7 +72,6 @@ export class CustomTextInput extends Component {
     const { customKeyboardType, ...others } = this.props;
     return (
       <View>
-        <Text>Hello</Text>
         <TextInput {...others} ref={this.onRef} />
       </View>
     );
