@@ -59,6 +59,7 @@ RNCustomKeyboardKit;
 | doDelete(tag) | Use in a custom keyboard, delete selected text or the charactor after cursor. |
 | moveLeft(tag) | Use in a custom keyboard, move cursor to selection start or move cursor left. |
 | moveRight(tag) | Use in a custom keyboard, move cursor to selection end or move cursor right. |
+| hideKeyboard(tag) | Hide a custom keyboard. |
 | switchSystemKeyboard(tag) | Use in a custom keyboard. Switch to system keyboard. Next time user press or focus on the `TextInput`, custom keyboard will appear again. To keep using system keyboard, call `uninstall` instead. |
 | CustomTextInput | Use instead of `TextInput`, this component support all properties of `TextInput`. |
 | prop: customKeyboardType: string | Use a registered custom keyboard. |
