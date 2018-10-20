@@ -18,6 +18,7 @@ const {
   insertText, backSpace, doDelete,
   moveLeft, moveRight,
   switchSystemKeyboard,
+  hideKeyboard,
 } = CustomKeyboardKit;
 
 export {
@@ -25,6 +26,7 @@ export {
   insertText, backSpace, doDelete,
   moveLeft, moveRight,
   switchSystemKeyboard,
+  hideKeyboard,
 };
 
 const keyboardTypeRegistry = {};

@@ -297,4 +297,22 @@ public class RNCustomKeyboardKitModule extends ReactContextBaseJavaModule {
       }
     });
   }
+
+  @ReactMethod
+  public void hideKeyboard(final int tag) {
+    UiThreadUtil.runOnUiThread(new Runnable() {
+      @Override
+      public void run() {
+        final ReactEditText edit = getEditById(tag);
+        if (edit == null) {
+          return;
+        }
+        
+        View keyboard = (View)edit.getTag(TAG_ID);
+        if (keyboard.getParent() != null) {
+          ((ViewGroup) keyboard.getParent()).removeView(keyboard);
+        }
+      }
+    });
+  }
 }
