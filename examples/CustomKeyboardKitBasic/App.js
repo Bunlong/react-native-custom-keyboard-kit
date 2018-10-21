@@ -186,12 +186,7 @@ export default class App extends Component<Props> {
           customKeyboardType="price"
           value={this.state.value}
           onChangeText={this.onChangeText}
-          style={{
-            backgroundColor: "#ffffff",
-            borderWidth: 1,
-            borderColor: "grey",
-            width: 270,
-          }}
+          style={styles.input}
         />
       </View>
     );
@@ -204,6 +199,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
+  },
+  input: {
+    backgroundColor: "#ffffff",
+    borderWidth: 1,
+    borderColor: "grey",
+    width: 270,
+    fontSize: 19,
   },
   buttonLabel: {
     borderWidth: 0.5,
