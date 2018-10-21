@@ -1,8 +1,11 @@
 # react-native-custom-keyboard-kit
 
+We will release very soon. Please stay tuned!
+
+<!--
+
 ![react-native-custom-keyboard-kit](./react-native-custom-keyboard-kit.png)
 
-We will release very soon. Please stay tuned!
 
 ## Getting started
 
@@ -470,3 +473,4 @@ You can find the source code [here](./examples/CustomKeyboardKitBasic).
 | CustomTextInput | Use instead of `TextInput`, this component support all properties of `TextInput`. |
 | prop: customKeyboardType: string | Use a registered custom keyboard. |
 
+-->
