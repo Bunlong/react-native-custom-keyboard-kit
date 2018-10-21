@@ -35,7 +35,7 @@ We will release very soon. Please stay tuned!
   	```
 3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
   	```
-      compile project(':react-native-custom-keyboard-kit')
+		compile project(':react-native-custom-keyboard-kit')
   	```
 
 
