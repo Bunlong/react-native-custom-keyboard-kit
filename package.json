@@ -1,21 +1,36 @@
 {
   "name": "react-native-custom-keyboard-kit",
   "version": "1.0.0",
-  "description": "",
+  "description": "React Native Custom Keyboard - Use your own custom keyboard instead of the system keyboard with React Native Custom Keyboard Kit.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "react-native"
+    "react-native",
+    "react",
+    "react-component",
+    "custom-input",
+    "input",
+    "react-native-custom-keyboard-kit",
+    "react-native-custom-keyboard"
   ],
-  "author": "",
-  "license": "",
+  "author": "Bunlong",
+  "license": "MIT",
   "peerDependencies": {
     "react-native": "^0.41.2",
     "react-native-windows": "0.41.0-rc.1"
   },
   "dependencies": {
     "prop-types": "^15.6.2"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/themodernjavascript/react-native-custom-keyboard-kit/issues"
+  },
+  "homepage": "https://github.com/themodernjavascript/react-native-custom-keyboard-kit",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/themodernjavascript/react-native-custom-keyboard-kit.git"
+  },
+  "nativePackage": true
 }
