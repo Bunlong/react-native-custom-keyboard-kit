@@ -8,39 +8,97 @@
 node_modules/
 npm-debug.log
 yarn-error.log
-  
+
+# example
 
 # Xcode
 #
-build/
-*.pbxuser
-!default.pbxuser
-*.mode1v3
-!default.mode1v3
-*.mode2v3
-!default.mode2v3
-*.perspectivev3
-!default.perspectivev3
-xcuserdata
-*.xccheckout
-*.moved-aside
-DerivedData
-*.hmap
-*.ipa
-*.xcuserstate
-project.xcworkspace
+examples/CustomKeyboardKitBasic/build/
+examples/CustomKeyboardKitBasic/*.pbxuser
+examples/CustomKeyboardKitBasic/!default.pbxuser
+examples/CustomKeyboardKitBasic/*.mode1v3
+examples/CustomKeyboardKitBasic/!default.mode1v3
+examples/CustomKeyboardKitBasic/*.mode2v3
+examples/CustomKeyboardKitBasic/!default.mode2v3
+examples/CustomKeyboardKitBasic/*.perspectivev3
+examples/CustomKeyboardKitBasic/!default.perspectivev3
+examples/CustomKeyboardKitBasic/xcuserdata
+examples/CustomKeyboardKitBasic/*.xccheckout
+examples/CustomKeyboardKitBasic/*.moved-aside
+examples/CustomKeyboardKitBasic/DerivedData
+examples/CustomKeyboardKitBasic/*.hmap
+examples/CustomKeyboardKitBasic/*.ipa
+examples/CustomKeyboardKitBasic/*.xcuserstate
+examples/CustomKeyboardKitBasic/project.xcworkspace
       
 
 # Android/IntelliJ
 #
-build/
-.idea
-.gradle
-local.properties
-*.iml
+examples/CustomKeyboardKitBasic/build/
+examples/CustomKeyboardKitBasic/.idea
+examples/CustomKeyboardKitBasic/.gradle
+examples/CustomKeyboardKitBasic/local.properties
+examples/CustomKeyboardKitBasic/*.iml
 
 # BUCK
-buck-out/
-\.buckd/
-*.keystore
-      
+examples/CustomKeyboardKitBasic/buck-out/
+examples/CustomKeyboardKitBasic/\.buckd/
+examples/CustomKeyboardKitBasic/*.keystore
+
+
+# OSX
+#
+examples/CustomKeyboardKitBasic/.DS_Store
+
+# Xcode
+#
+examples/CustomKeyboardKitBasic/build/
+examples/CustomKeyboardKitBasic/*.pbxuser
+examples/CustomKeyboardKitBasic/!default.pbxuser
+examples/CustomKeyboardKitBasic/*.mode1v3
+examples/CustomKeyboardKitBasic/!default.mode1v3
+examples/CustomKeyboardKitBasic/*.mode2v3
+examples/CustomKeyboardKitBasic/!default.mode2v3
+examples/CustomKeyboardKitBasic/*.perspectivev3
+examples/CustomKeyboardKitBasic/!default.perspectivev3
+examples/CustomKeyboardKitBasic/xcuserdata
+examples/CustomKeyboardKitBasic/*.xccheckout
+examples/CustomKeyboardKitBasic/*.moved-aside
+examples/CustomKeyboardKitBasic/DerivedData
+examples/CustomKeyboardKitBasic/*.hmap
+examples/CustomKeyboardKitBasic/*.ipa
+examples/CustomKeyboardKitBasic/*.xcuserstate
+examples/CustomKeyboardKitBasic/project.xcworkspace
+
+# Android/IntelliJ
+#
+examples/CustomKeyboardKitBasic/build/
+examples/CustomKeyboardKitBasic/.idea
+examples/CustomKeyboardKitBasic/.gradle
+examples/CustomKeyboardKitBasic/local.properties
+examples/CustomKeyboardKitBasic/*.iml
+
+# node.js
+#
+examples/CustomKeyboardKitBasic/node_modules/
+examples/CustomKeyboardKitBasic/npm-debug.log
+examples/CustomKeyboardKitBasic/yarn-error.log
+
+# BUCK
+examples/CustomKeyboardKitBasic/buck-out/
+examples/CustomKeyboardKitBasic/\.buckd/
+examples/CustomKeyboardKitBasic/*.keystore
+
+# fastlane
+#
+# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
+# screenshots whenever they are needed.
+# For more information about the recommended setup visit:
+# https://docs.fastlane.tools/best-practices/source-control/
+
+examples/CustomKeyboardKitBasic/*/fastlane/report.xml
+examples/CustomKeyboardKitBasic/*/fastlane/Preview.html
+examples/CustomKeyboardKitBasic/*/fastlane/screenshots
+
+# Bundle artifact
+examples/CustomKeyboardKitBasic/*.jsbundle
