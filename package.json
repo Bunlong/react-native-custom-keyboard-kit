@@ -1,6 +1,6 @@
 {
   "name": "react-native-custom-keyboard-kit",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "React Native Custom Keyboard - Use your own custom keyboard instead of the system keyboard with React Native Custom Keyboard Kit.",
   "main": "index.js",
   "scripts": {
