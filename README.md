@@ -1,8 +1,6 @@
 # react-native-custom-keyboard-kit
 
-
 ![react-native-custom-keyboard-kit](./react-native-custom-keyboard-kit.png)
-
 
 ## Getting started
 
@@ -21,14 +19,14 @@
   - Add `import com.reactlibrary.RNCustomKeyboardKitPackage;` to the imports at the top of the file
   - Add `new RNCustomKeyboardKitPackage()` to the list returned by the `getPackages()` method
 2. Append the following lines to `android/settings.gradle`:
-  	```
-  	include ':react-native-custom-keyboard-kit'
-  	project(':react-native-custom-keyboard-kit').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-custom-keyboard-kit/android')
-  	```
+    ```
+    include ':react-native-custom-keyboard-kit'
+    project(':react-native-custom-keyboard-kit').projectDir = new File(rootProject.projectDir,  '../node_modules/react-native-custom-keyboard-kit/android')
+    ```
 3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
-  	```
-		compile project(':react-native-custom-keyboard-kit')
-  	```
+    ```
+    compile project(':react-native-custom-keyboard-kit')
+    ```
 
 #### iOS
 
