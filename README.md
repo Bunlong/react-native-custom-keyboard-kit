@@ -1,8 +1,5 @@
 # react-native-custom-keyboard-kit
 
-We will release very soon. Please stay tuned!
-
-<!--
 
 ![react-native-custom-keyboard-kit](./react-native-custom-keyboard-kit.png)
 
@@ -472,5 +469,3 @@ You can find the source code [here](./examples/CustomKeyboardKitBasic).
 | switchSystemKeyboard(tag) | Use in a custom keyboard. Switch to system keyboard. Next time user press or focus on the `TextInput`, custom keyboard will appear again. To keep using system keyboard, call `uninstall` instead. |
 | CustomTextInput | Use instead of `TextInput`, this component support all properties of `TextInput`. |
 | prop: customKeyboardType: string | Use a registered custom keyboard. |
-
--->
