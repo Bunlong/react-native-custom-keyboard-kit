@@ -1,8 +1,6 @@
 # react-native-custom-keyboard-kit
 
-
 ![react-native-custom-keyboard-kit](./react-native-custom-keyboard-kit.png)
-
 
 ## Getting started
 
