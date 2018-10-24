@@ -486,3 +486,7 @@ How to contribute:
 - Discuss ideas in issues
 - Spread the word
 - Reach out with any feedback
+
+## License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
