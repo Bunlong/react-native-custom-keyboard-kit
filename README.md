@@ -1,8 +1,8 @@
 # react-native-custom-keyboard-kit
 
+React Native Custom Keyboard - Use your own custom keyboard instead of the system keyboard with React Native Custom Keyboard Kit. [![version](https://img.shields.io/npm/v/react-native-custom-keyboard-kit.svg?style=flat-square)](https://www.npmjs.com/package/react-native-custom-keyboard-kit) [![downloads](https://img.shields.io/npm/dm/react-native-custom-keyboard-kit.svg?style=flat-square)](https://www.npmjs.com/package/react-native-custom-keyboard-kit) [![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](http://opensource.org/licenses/MIT).
 
 ![react-native-custom-keyboard-kit](./react-native-custom-keyboard-kit.png)
-
 
 ## Getting started
 
