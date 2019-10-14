@@ -1,7 +1,9 @@
 
+#import <React/RCTRootView.h>
 #import "RNCustomKeyboardKit.h"
 #import "RCTBridge+Private.h"
 #import "RCTUIManager.h"
+#import <React/RCTSinglelineTextInputView.h>
 
 @implementation RNCustomKeyboardKit
 
@@ -16,16 +18,15 @@ RCT_EXPORT_MODULE(CustomKeyboardKit)
 
 RCT_EXPORT_METHOD(install:(nonnull NSNumber *)reactTag withType:(nonnull NSString *)keyboardType)
 {
-  UIView* inputView = [[RCTRootView alloc] initWithBridge:((RCTBatchedBridge *)_bridge).parentBridge moduleName:@"CustomKeyboardKit" initialProperties:
-    @{
-      @"tag": reactTag,
-      @"type": keyboardType
-    }
-  ];
+  UIView* inputView = [[RCTRootView alloc] initWithBridge:_bridge
+                                               moduleName:@"CustomKeyboardKit"
+                                        initialProperties:@{ @"tag": reactTag, @"type": keyboardType }];
 
-  UITextView *view = (UITextView*)[_bridge.uiManager viewForReactTag:reactTag];
+  RCTSinglelineTextInputView *view = (RCTSinglelineTextInputView*)[_bridge.uiManager viewForReactTag:reactTag];
 
-  view.inputView = inputView;
+    
+  [view.backedTextInputView setInputAccessoryView:inputView];
+    
   [view reloadInputViews];
 }
 
@@ -70,7 +71,7 @@ RCT_EXPORT_METHOD(moveLeft:(nonnull NSNumber *)reactTag) {
   UITextPosition* position = range.start;
 
   if ([view comparePosition:range.start toPosition:range.end] == 0) {
-    position = [view positionFromPosition: position, offset: -1];
+      position = [view positionFromPosition:position offset:-1];
   }
 
   view.selectedTextRange = [view textRangeFromPosition: position toPosition:position];
@@ -83,7 +84,7 @@ RCT_EXPORT_METHOD(moveRight:(nonnull NSNumber *)reactTag) {
   UITextPosition* position = range.end;
 
   if ([view comparePosition:range.start toPosition:range.end] == 0) {
-    position = [view positionFromPosition: position, offset: 1];
+    position = [view positionFromPosition: position offset: 1];
   }
 
   view.selectedTextRange = [view textRangeFromPosition: position toPosition:position];
