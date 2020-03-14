@@ -682,9 +682,9 @@ acorn-walk@^6.0.1:
   integrity sha512-ugTb7Lq7u4GfWSqqpwE0bGyoBZNMTok/zDBXxfEG0QM50jNlGhIWjRC1pPN7bvV1anhF+bs+/gNcRw+o55Evbg==
 
 acorn@^5.5.3:
-  version "5.7.3"
-  resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.7.3.tgz#67aa231bf8812974b85235a96771eb6bd07ea279"
-  integrity sha512-T/zvzYRfbVojPWahDsE5evJdHb3oJoQfFbsrKM7w5Zcs++Tr257tia3BmMP8XYVjp1S9RZXQMh7gao96BlqZOw==
+  version "5.7.4"
+  resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.7.4.tgz#3e8d8a9947d0599a1796d10225d7432f4a4acf5e"
+  integrity sha512-1D++VG7BhrtvQpNbBzovKNc1FLGGEE/oGe7b9xJm/RFHMBeUaUGpluV9RLjZa47YFdPcDAenEYuq9pQPcMdLJg==
 
 acorn@^6.0.1:
   version "6.0.2"
@@ -4780,6 +4780,13 @@ react-is@^16.6.0-alpha.8af6728:
   version "16.6.0-alpha.8af6728"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.6.0-alpha.8af6728.tgz#3ce01f13f164b90a76ad902735834fc12d06e30e"
   integrity sha512-F65AeMavskvRglteO7dC0Nvq3Br1ESnpCOG5M6fenQX52Uhpt6eCI0vL3ICM/hnVhIOQY2fwnSWtST33OlgxVA==
+
+react-native-custom-keyboard-kit@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/react-native-custom-keyboard-kit/-/react-native-custom-keyboard-kit-1.0.2.tgz#5fa463b1aae4564f82880d267ab362061e5a5da1"
+  integrity sha512-dknh7Rr6TKVsEYP7RJjE1HKjlmRNABhfZJf914JeAZhN0NGTTLkrGtTstJ51I+MBorgFlhDN8RSqKIzA0kQcgA==
+  dependencies:
+    prop-types "^15.6.2"
 
 react-native@0.57.3:
   version "0.57.3"
