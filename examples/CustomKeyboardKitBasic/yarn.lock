@@ -3804,9 +3804,9 @@ merge-stream@^1.0.1:
     readable-stream "^2.0.1"
 
 merge@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/merge/-/merge-1.2.0.tgz#7531e39d4949c281a66b8c5a6e0265e8b05894da"
-  integrity sha1-dTHjnUlJwoGma4xabgJl6LBYlNo=
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/merge/-/merge-1.2.1.tgz#38bebf80c3220a8a487b6fcfb3941bb11720c145"
+  integrity sha512-VjFo4P5Whtj4vsLzsYBu5ayHhoHJ0UqNm7ibvShmbmoz7tGi0vXaoJbGdB+GmDMLUdg8DpQXEIeVDAe8MaABvQ==
 
 metro-babel-register@^0.48.1:
   version "0.48.1"
@@ -4780,6 +4780,13 @@ react-is@^16.6.0-alpha.8af6728:
   version "16.6.0-alpha.8af6728"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.6.0-alpha.8af6728.tgz#3ce01f13f164b90a76ad902735834fc12d06e30e"
   integrity sha512-F65AeMavskvRglteO7dC0Nvq3Br1ESnpCOG5M6fenQX52Uhpt6eCI0vL3ICM/hnVhIOQY2fwnSWtST33OlgxVA==
+
+react-native-custom-keyboard-kit@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/react-native-custom-keyboard-kit/-/react-native-custom-keyboard-kit-1.0.2.tgz#5fa463b1aae4564f82880d267ab362061e5a5da1"
+  integrity sha512-dknh7Rr6TKVsEYP7RJjE1HKjlmRNABhfZJf914JeAZhN0NGTTLkrGtTstJ51I+MBorgFlhDN8RSqKIzA0kQcgA==
+  dependencies:
+    prop-types "^15.6.2"
 
 react-native@0.57.3:
   version "0.57.3"
